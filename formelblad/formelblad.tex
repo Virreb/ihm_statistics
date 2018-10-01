@@ -1,0 +1,72 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\title{Formelblad - statistik HT18}
+
+\begin{document}
+\maketitle
+\begin{center}
+  Victor Bäckman, victor.backman@advectas.se
+\end{center}
+\vspace{5mm}
+
+\subsection*{Operationer}
+Fakultet\\
+$1! = 1$ \\
+$2! = 1 \cdot 2 = 2$ \\
+$3! = 1 \cdot 2 \cdot 3 = 6$ \\
+och så vidare.
+
+\subsection*{Nyckeltal}
+Medelvärde: $\bar{x} = \frac{\sum_{i=1}^n x_i}{n}$ \\
+Standardavvikelse: $\sigma = \sqrt{\frac{\sum_{i=1}^n (x_i - \bar{x}^2)}{n}}$ \\
+Medianens position i en lista $= \frac{n+1}{2}$ \\
+Kvartilavstånd $=q_3 -q_1$
+
+\subsection*{Kombinatorik}
+Kombinationer utan återinläggning: $C_n^k = \binom{n}{k} = \frac{n!}{k!(n-k)!}$ \\
+Kombinationer med återinläggning: $C_n^k = \binom{n+k-1}{k} = \frac{(n+k-1)!}{k!(n-1)!}$ \\
+Permutationer utan återinläggning: $P_n^k = \frac{n!}{(n-k)!}$ \\
+Permutationer med återinläggning: $P_n^k = n^k$
+\newpage
+\subsection*{Sannolikhetslära}
+$S$: utfallsrum \\
+$A,B \in S$ (A,B är händelser eller delmängder av S \\
+$A,B$ är disjunkta om de inte har några gemensamma element (inget överlapp) \\
+$A,B$ är beroende om de påverkar förutsättningarna för varandra \\
+$A \cup B$: Unionen mellan A och B (A eller B) \\
+$A \cap B$: Snittet mellan A och B (A och B) \\
+Sannolikheten för A $= P_r(A) = \frac{\text{antal gynnsamma utfall}}{\text{antal utfall}}$ \\
+ \\
+Regler:
+\begin{enumerate}
+  \item{$0 \leq P_r(A) \leq 1$}
+  \item{$\sum_{i=1}^n P_r(A_i) = 1$}
+  \item{$P_r(A^c) = 1 - P_r(A)$}
+\end{enumerate}
+Additionssatsen: \\
+A,B disjunkta (inget överlapp): $P_r(A \cup B) = P_r(A) + P_r(B)$ \\
+A,B ej disjunkta (överlapp): $P_r(A \cup B) = P_r(A) + P_r(B) - P_r(A \cap B)$ \\
+ \vspace{1mm} \\
+Multiplikationssatsen: \\
+A,B oberoende: $P_r(A \cap B) = P_r(A) \cdot P_r(B)$ \\
+A,B beroende: $P_r(A \cap B) = P_r(A) \cdot P_r(B|A) = P_r(B) \cdot P_r(A|B) = P_r(B \cap A)$ \\
+ \vspace{1mm} \\
+Betingad sannolikhet: \\
+Sannolikheten att A händer om B redan har hänt: $P_r(A|B) = \frac{P_r(A \cap B)}{P_r(B)}$ \\
+A och B är oberoende om: $P_r(A|B) = P_r(A)$ \\
+\vspace{1mm} \\
+Ods för händelse A: $O(A) = \frac{P_r(A)}{P_r(A^c)} = \frac{P_r(A)}{1-P_r(A)}$
+
+\subsection*{Regression}
+Räta linjens ekvation: $y = kx + m, k=\frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}, m=y_1 - kx_1$
+
+\vfill
+\end{document}
