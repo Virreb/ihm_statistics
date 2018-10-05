@@ -7,24 +7,25 @@
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{amsmath}
+\usepackage{pdfpages}
 
-\title{Formelblad - statistik HT18}
-
+\title{Formelblad \\ {\large Statistik HT18 (DMS17H)}}
+\author{Victor Bäckman, victor.backman@advectas.se}
 \begin{document}
 \maketitle
-\begin{center}
-  Victor Bäckman, victor.backman@advectas.se
-\end{center}
-\vspace{5mm}
 
 \subsection*{Operationer}
 Fakultet\\
+$0! = 1$ av definition \\
 $1! = 1$ \\
 $2! = 1 \cdot 2 = 2$ \\
 $3! = 1 \cdot 2 \cdot 3 = 6$ \\
-och så vidare.
+$4! = 1 \cdot 2 \cdot 3 \cdot 4 = 24$ \\
+och så vidare.\\
+\vspace{1mm} \\
+Binomialkoefficient: $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
 
-\subsection*{Nyckeltal}
+\subsection*{Deskriptiv statistik}
 Medelvärde: $\bar{x} = \frac{\sum_{i=1}^n x_i}{n}$ \\
 Standardavvikelse: $\sigma = \sqrt{\frac{\sum_{i=1}^n (x_i - \bar{x}^2)}{n}}$ \\
 Medianens position i en lista $= \frac{n+1}{2}$ \\
@@ -35,9 +36,14 @@ Kombinationer utan återinläggning: $C_n^k = \binom{n}{k} = \frac{n!}{k!(n-k)!}
 Kombinationer med återinläggning: $C_n^k = \binom{n+k-1}{k} = \frac{(n+k-1)!}{k!(n-1)!}$ \\
 Permutationer utan återinläggning: $P_n^k = \frac{n!}{(n-k)!}$ \\
 Permutationer med återinläggning: $P_n^k = n^k$
+
+\subsection*{Linjär regression (fler formler kommer efter kapitel 10)}
+Räta linjens ekvation: $y = kx + m, k=\frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}, m=y_1 - kx_1$
+
 \newpage
+
 \subsection*{Sannolikhetslära}
-$S$: utfallsrum \\
+$S$: utfallsrum, unika element \\
 $A,B \in S$ (A,B är händelser eller delmängder av S \\
 $A,B$ är disjunkta om de inte har några gemensamma element (inget överlapp) \\
 $A,B$ är beroende om de påverkar förutsättningarna för varandra \\
@@ -51,22 +57,49 @@ Regler:
   \item{$\sum_{i=1}^n P_r(A_i) = 1$}
   \item{$P_r(A^c) = 1 - P_r(A)$}
 \end{enumerate}
-Additionssatsen: \\
+{\bf Additionssatsen:} \\
 A,B disjunkta (inget överlapp): $P_r(A \cup B) = P_r(A) + P_r(B)$ \\
 A,B ej disjunkta (överlapp): $P_r(A \cup B) = P_r(A) + P_r(B) - P_r(A \cap B)$ \\
  \vspace{1mm} \\
-Multiplikationssatsen: \\
+{\bf Multiplikationssatsen:} \\
 A,B oberoende: $P_r(A \cap B) = P_r(A) \cdot P_r(B)$ \\
-A,B beroende: $P_r(A \cap B) = P_r(A) \cdot P_r(B|A) = P_r(B) \cdot P_r(A|B) = P_r(B \cap A)$ \\
+A,B beroende: $P_r(A \cap B) = P_r(B) \cdot P_r(A|B) = P_r(A) \cdot P_r(B|A) = P_r(B \cap A)$ \\
  \vspace{1mm} \\
-Betingad sannolikhet: \\
+{\bf Betingad sannolikhet:} \\
 Sannolikheten att A händer om B redan har hänt: $P_r(A|B) = \frac{P_r(A \cap B)}{P_r(B)}$ \\
 A och B är oberoende om: $P_r(A|B) = P_r(A)$ \\
 \vspace{1mm} \\
-Ods för händelse A: $O(A) = \frac{P_r(A)}{P_r(A^c)} = \frac{P_r(A)}{1-P_r(A)}$
+Odds för händelse A: $O(A) = \frac{P_r(A)}{P_r(A^c)} = \frac{P_r(A)}{1-P_r(A)}$
 
-\subsection*{Regression}
-Räta linjens ekvation: $y = kx + m, k=\frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}, m=y_1 - kx_1$
+\newpage
 
-\vfill
+\subsection*{Sannolikhetsfördelningar}
+Väntevärde: $\mu = \sum_{i=1}^g P_r(x_i) x_i$, \, $g=$antal enheter \\
+Standardavvikelse: $\sigma = \sqrt{\sum_{i=1}^g P_r(x_i) (x_i - \mu)^2}$ \\
+Varians: $Var(X) = \sigma^2$ \\
+\vspace{1mm} \\
+{\bf Normalfördelning:}
+\begin{enumerate}
+    \item{Är symmetrisk}
+    \item{Har kontinuerliga värden}
+\end{enumerate}
+$X \approx N(\mu, \sigma) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-1}{2}(\frac{x-\mu}{\sigma})^2}$ \\
+\vspace{1mm}\\
+Transformering för att läsa av tabell (längst bak): $z = \frac{x-\mu}{\sigma}$ \\
+\vspace{1mm} \\
+{\bf Binomialfördelning:}
+\begin{enumerate}
+    \item{Har diskreta värden}
+    \item{Alla försök ska vara oberoende av varandra}
+    \item{Utfallet ska vara binärt (True eller False)}
+\end{enumerate}
+$X \approx bin(n, \bar{P}) => P_r(k) = \binom{n}{k} \bar{P}^k(1-\bar{P})^{n-k}$, \, $n=$antal försök, $\bar{P}=$sannolikhet att ett försök lyckas. \\
+\vspace{1mm}\\
+Nyckeltal: $\mu=n\bar{P}$,\, $\sigma=\sqrt{n\bar{P}(1-\bar{P})}$
+Approximera binomialfördelning med en normalfördelning om: $n\bar{P}(1-\bar{P}) > 5$
+
+
+
+\includepdf[pages=-]{standardnormaltable.pdf}
+
 \end{document}
