@@ -1,0 +1,66 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\title{Omtentamen\\ {Statistik HT18 (DMS17H)}}
+\author{Victor Bäckman, victor.backman@advectas.se}
+
+\begin{document}
+\maketitle
+\vspace{2cm}
+Namn:
+{\rule{13cm}{0.4pt}}
+\vspace{5cm}
+\begin{center}
+  Tillåtna hjälpmedel: miniräknare och nytt formelblad.\\
+    \vspace{3cm}
+  {\huge Lycka till!}
+\end{center}
+
+\newpage
+\begin{enumerate}
+    \item{En pop-up butik har $6$ stycken olika produkter med id: $\{1, 2, 3, 4, 5, 6\}$. Produkterna kan delas upp i två olika produktgrupper; $A=[1, 3]$ och $B=[2, 4, 5, 6]$.}
+    \begin{enumerate}
+        \item{Skissa upp produktgrupperna i ett Venndiagram, är de disjunkta?}
+        \vspace{8cm}
+        \item{Du försöker locka kunder genom att anordna en klassisk fiskedamm i butiken. Du lägger en av varje produkt i en låda och drar slumpmässigt ut en produkt per fiskare. Hur stor är sannolikheten att den första fiskaren får en av produkterna i grupp $B$?}
+        \newpage
+        \item{Vad är sannolikheten för nästa fiskare att också få en produkt från grupp $B$? (dammen fylls inte på med nya produkter)}
+    \end{enumerate}
+    \newpage
+    \item{Hur många olika kombinationer med $3$ stycken produkter kan du skapa utifrån de $6$ ovan? Ordningen mellan produkterna spelar ingen roll och en produkt får endast finnas med en gång per kombination.}
+    \newpage
+    \item{Pop-up butiken lockar en hel del folk, men alla som kommer in i butiken köper inte. Du blir nyfiken på hur stor andel det är som faktisk köper och får låna en utrustning som mäter antalet kunder som går in i butiken per timme och väger det mot antalet köp. Eftersom du bara har lånat mätanordningen behöver du lämna tillbaka den efter 4 timmar, resultatet kan ses i tabellen ovan.
+    \begin{table}
+        \centering
+        \begin{tabular}[H]{c|c|c}
+        \textbf{Timme} & \textbf{Antal besökare $(x)$}  & \textbf{Antal köp $(y)$}\\ \hline
+        13:00                    & 61                   & 13                           \\
+        14:00                    & 47                   & 7                           \\
+        15:00                    & 23                   & 4                           \\
+        16:00                    & 83                   & 15
+        \end{tabular}
+    \end{table}
+  }
+    \begin{enumerate}
+        \item{Skissa upp datan i en "scatter-plot". Ser du någon korrelation?}
+        \newpage
+        \item{Bevisa att det finns en korrelation genom att beräkna korrelationskoefficienten $r$}
+        \newpage
+        \item{Beskriv korrelationen med en linjär regression ($\hat{y}=kx+m$). Skissa även upp linjen i din "scatter-plot".}
+        \newpage
+        \item{Använd din linjära regression för att uppskatta hur många köp butiken hade haft om det var $150$ besökare under en timme. Kan du lita på värdet?}
+        \newpage
+        \item{Tolka värdet för $k$ och $m$, vad betyder dem i detta fallet? Är dem rimliga? Beskriv med ord!}
+    \end{enumerate}
+    \newpage
+    \item{Pop-up butiken mäter kundnöjdhet genom att kunderna vid utgången får betygssätta besöket genom olika "smiley-knappar". Du uppskattar att under en hel dag har pop-up butiken haft ungefär $400$ besökare varav $22$ har markerat att de var missnöjda. Bilda ett $90\%$ konfidensintervall för detta.}
+\end{enumerate}
+
+\end{document}

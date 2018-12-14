@@ -1,0 +1,81 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\title{Tentamen\\ {Statistik HT18 (DMS17H)}}
+\author{Victor Bäckman, victor.backman@advectas.se}
+
+\begin{document}
+\maketitle
+\vspace{2cm}
+Namn:
+{\rule{13cm}{0.4pt}}
+\vspace{5cm}
+\begin{center}
+  Tillåtna hjälpmedel: miniräknare och nytt formelblad.\\
+    \vspace{3cm}
+  {\huge Lycka till!}
+\end{center}
+
+\newpage
+{\bf Premiss} \\
+I sann entreprenörsanda väljer du att starta en e-handel som ett sidoprojekt bredvid dina studier på IHM. Du köper in fem stycken olika produkter från Kina som får produkt-id: $\{1, 2, 3, 4, 5\}$ i ditt e-handelssystem.
+\vspace{2cm}
+
+\begin{enumerate}
+    \item{Eftersom du är grym på digital marknadsföring får du snabbt in två stycken ordrar: $A=[1, 3]$ och $B=[2, 3, 5]$. Antag i detta skedet att alla produkter är lika eftertraktade (har samma sannolikhet att säljas).}
+    \begin{enumerate}
+        \item{Skissa upp ordrarna i ett Venndiagram, är de disjunkta?}
+        \vspace{8cm}
+        \item{Vad är sannolikheten att båda ordrar innehöll produkt $3$? Antag att ordrarna var oberoende av varandra.}
+    \end{enumerate}
+    \newpage
+    \item{Din plan är nu att slå dig in på marknaden med en fet kampanj. Detta genom att sätta ihop paketpris för två-och-två av dina produkter. Hur många olika paketpris kan du skapa? Ordningen mellan produkterna spelar ingen roll och du vill inte ha samma produkt två gånger i samma paket.}
+    \newpage
+    \item{När din e-handel börjar växa märker du att du börjar få en del returer. Under en månad antecknar du antalet returer och antalet köp per vecka, resultatet kan ses i tabellen ovan.
+    \begin{table}
+        \centering
+        \begin{tabular}[H]{c|c|c}
+        \textbf{Vecka $(i)$} & \textbf{Antal köp $(x)$}  & \textbf{Antal returer $(y)$}\\ \hline
+        1                    & 32                        & 2                           \\
+        2                    & 76                        & 3                           \\
+        3                    & 105                       & 5                           \\
+        4                    & 119                       & 6
+        \end{tabular}
+    \end{table}
+  }
+    \begin{enumerate}
+        \item{Skissa upp datan i en "scatter-plot". Ser du någon korrelation?}
+        \newpage
+        \item{Bevisa att det finns en korrelation genom att beräkna korrelationskoefficienten $r$}
+        \newpage
+        \item{Beskriv korrelationen med en linjär regression ($\hat{y}=kx+m$). Skissa även upp linjen i din "scatter-plot".}
+        \newpage
+        \item{Tolka värdet för $k$ och $m$, vad betyder dem i detta fallet? Är dem rimliga? Beskriv med ord!}
+    \end{enumerate}
+    \newpage
+    \item{Du har en teori om att antalet returer beror på att en av grossisterna du köper från levererar defekta produkter. Över en lång tid mäter du att i snitt $3\%$ av alla produkter från denna grossist är skadade. Alla produkter skickas i separata sändningar som därav kan anses oberoende.}
+    \begin{enumerate}
+        \item{Vad är sannolikheten att $2$ produkter är defekta, om du beställer $10$ stycken?}
+        \newpage
+        \item{Vad är sannolikheten att fler än $13$ produkter är defekta, om du beställer $250$ stycken?}
+    \end{enumerate}
+    \newpage
+    \item{Du har en produkt som är sjukt poppis och säljer slut fort. Ditt e-handelssystem har beräknat att sannolikheten för att den finns i lager är i snitt $80\%$. När du analyserar din försäljningsdata ser du att produkten säljs i snitt $1$ gång per $40$ besök på hemsidan.\\
+  \\
+  Låt $A$ beteckna händelsen att produkten finns i lager.\\
+  Låt $B$ beteckna händelsen att produkten säljs.}
+    \begin{enumerate}
+        \item{Vad är sannolikheten att den populära produkten säljs under ett slumpmässigt besök? (Att den är i lager {\bf och} säljs)}
+        \newpage
+        \item{Vad är sannolikheten att den populära produkten säljs minst $1$ gång under $10$ besök?}
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

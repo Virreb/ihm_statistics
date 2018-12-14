@@ -20,26 +20,29 @@ $0! = 1$ av definition \\
 $1! = 1$ \\
 $2! = 1 \cdot 2 = 2$ \\
 $3! = 1 \cdot 2 \cdot 3 = 6$ \\
-$4! = 1 \cdot 2 \cdot 3 \cdot 4 = 24$ \\
+$4! = 1 \cdot 2 \cdot 3 \cdot 4 = 3! \cdot 4 = 24$ \\
 och så vidare.\\
 \vspace{1mm} \\
 Binomialkoefficient: $\binom{n}{k} = \frac{n!}{k!(n-k)!}$
 
 \subsection*{Deskriptiv statistik}
 Medelvärde: $\bar{x} = \frac{\sum_{i=1}^n x_i}{n}$ \\
-Standardavvikelse: $\sigma = \sqrt{\frac{\sum_{i=1}^n (x_i - \bar{x}^2)}{n}}$ \\
+Standardavvikelse: $\sigma = \sqrt{\frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n}}$ \\
+Varians: $Var(X) = \sigma^2$ \\
 Medianens position i en lista $= \frac{n+1}{2}$ \\
 Kvartilavstånd $=q_3 -q_1$
 
-\subsection*{Kombinatorik}
-Kombinationer utan återinläggning: $C_n^k = \binom{n}{k} = \frac{n!}{k!(n-k)!}$ \\
-Kombinationer med återinläggning: $C_n^k = \binom{n+k-1}{k} = \frac{(n+k-1)!}{k!(n-1)!}$ \\
-Permutationer utan återinläggning: $P_n^k = \frac{n!}{(n-k)!}$ \\
-Permutationer med återinläggning: $P_n^k = n^k$
-
-\subsection*{Linjär regression (fler formler kommer efter kapitel 10)}
-Räta linjens ekvation: $y = kx + m, k=\frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}, m=y_1 - kx_1$
-
+\subsection*{Korrelation}
+Korrelationskoefficient: $r=\frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2\sum_{i=1}^n (y_i - \bar{y})^2}}$ \\
+\, \\
+Räta linjens ekvation: $y = kx + m$
+\begin{enumerate}
+  \item{Grafiskt genom att välja ut två punkter: \\ \, \\ $k=\frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}$\\ \, \\ $m=y_1 - kx_1$}
+  \item{Genom regression: \\ \, \\ $k=\frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}$ \\
+\, \\
+$m=\bar{y} - k\bar{x}$
+  }
+\end{enumerate}
 \newpage
 
 \subsection*{Sannolikhetslära}
@@ -70,20 +73,26 @@ Sannolikheten att A händer om B redan har hänt: $P_r(A|B) = \frac{P_r(A \cap B
 A och B är oberoende om: $P_r(A|B) = P_r(A)$ \\
 \vspace{1mm} \\
 Odds för händelse A: $O(A) = \frac{P_r(A)}{P_r(A^c)} = \frac{P_r(A)}{1-P_r(A)}$
+\vspace{1cm} \\
+\subsection*{Kombinatorik}
+Kombinationer utan återinläggning: $C_n^k = \binom{n}{k} = \frac{n!}{k!(n-k)!}$ \\
+Kombinationer med återinläggning: $C_n^k = \binom{n+k-1}{k} = \frac{(n+k-1)!}{k!(n-1)!}$ \\
+Permutationer utan återinläggning: $P_n^k = \frac{n!}{(n-k)!}$ \\
+Permutationer med återinläggning: $P_n^k = n^k$ \\
+$n: $ totala antalet element, $k: $ antalet uttagna element
 
 \newpage
 
 \subsection*{Sannolikhetsfördelningar}
 Väntevärde: $\mu = \sum_{i=1}^g P_r(x_i) x_i$, \, $g=$antal enheter \\
 Standardavvikelse: $\sigma = \sqrt{\sum_{i=1}^g P_r(x_i) (x_i - \mu)^2}$ \\
-Varians: $Var(X) = \sigma^2$ \\
 \vspace{1mm} \\
 {\bf Normalfördelning:}
 \begin{enumerate}
     \item{Är symmetrisk}
     \item{Har kontinuerliga värden}
 \end{enumerate}
-$X \approx N(\mu, \sigma) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-1}{2}(\frac{x-\mu}{\sigma})^2}$ \\
+$\Rightarrow f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-1}{2}(\frac{x-\mu}{\sigma})^2}$ \\
 \vspace{1mm}\\
 Transformering för att läsa av tabell (längst bak): $z = \frac{x-\mu}{\sigma}$ \\
 \vspace{1mm} \\
@@ -93,10 +102,23 @@ Transformering för att läsa av tabell (längst bak): $z = \frac{x-\mu}{\sigma}
     \item{Alla försök ska vara oberoende av varandra}
     \item{Utfallet ska vara binärt (True eller False)}
 \end{enumerate}
-$X \approx bin(n, \bar{P}) => P_r(k) = \binom{n}{k} \bar{P}^k(1-\bar{P})^{n-k}$, \, $n=$antal försök, $\bar{P}=$sannolikhet att ett försök lyckas. \\
-\vspace{1mm}\\
-Nyckeltal: $\mu=n\bar{P}$,\, $\sigma=\sqrt{n\bar{P}(1-\bar{P})}$
-Approximera binomialfördelning med en normalfördelning om: $n\bar{P}(1-\bar{P}) > 5$
+$\Rightarrow P_r(k) = \binom{n}{k} P^k(1-P)^{n-k}$, \\
+\, \\
+$n=$ antal försök, $P=$ sannolikhet att ett försök lyckas. \\
+\, \\
+Nyckeltal: $\mu=nP$,\, $\sigma=\sqrt{nP(1-P)}$ \\
+Approximera binomialfördelning med en normalfördelning om: $nP(1-P) > 5$
+\vspace{1cm} \\
+\subsection*{Konfidensintervall}
+Krav:
+\begin{enumerate}
+  \item{Elementen i stickprovet ska vara oberoende}
+  \item{$nP(1-P) > 5$ (kan approximeras som en normalfördelning)}
+\end{enumerate}
+$\Rightarrow P \pm Z \cdot \sqrt{\frac{P(1-P)}{n}}$, \\
+\, \\
+$Z$ utläses ur tabell enligt $Pr(Z) = 1 - \frac{\alpha}{2}$, $n$ är antalet element och \\
+signifikansnivån $\alpha = 1-$konfidensnivån
 
 
 
