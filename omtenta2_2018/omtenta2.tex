@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\title{Omtentamen 2\\ {Statistik HT18 (DMS17H)}}
+\author{Victor Bäckman, victor.backman@advectas.se}
+
+\begin{document}
+\maketitle
+\vspace{2cm}
+Namn:
+{\rule{13cm}{0.4pt}}
+\vspace{5cm}
+\begin{center}
+  Tillåtna hjälpmedel: miniräknare och nytt formelblad.\\
+    \vspace{3cm}
+  {\huge Lycka till!}
+\end{center}
+
+\newpage
+\begin{enumerate}
+  \item{Du jobbar som webbanalytiker på ett företag och har precis lanserat fyra stycken annonser av samma kampanj. Under en timme mäter du följande antal klick per annons $[5, 8, 2, 9, 6]$}. Beräkna följande:
+    \begin{enumerate}
+      \item{Medelvärdet}
+      \vspace{6cm}
+      \item{Medianen}
+      \vspace{4cm}
+      \item{Standardavvikelsen}
+    \end{enumerate}
+\newpage
+  \item{Du har tråkigt under en tågresa och bestämmer dig för att räkna på olika sannolikheter med en kortlek. Beräkna följande:}
+    \begin{enumerate}
+      \item{Vad är sannolikheten att dra ett svart kort eller ett hjärter i samma drag?}
+      \vspace{8cm}
+      \item{Vad är sannolikheten att dra ett ruter eller en drottning i samma drag?}
+      \newpage
+      \item{Du hittar sedan $6$ klossar av olika färg. Hur många kombinationer av $3$ klossar kan du skapa om du inte lägger tillbaka klossarna mellan dragen?}
+    \end{enumerate}
+\newpage
+  \item{Du är tillbaka på jobbet efter tågresan och har nu börjat få in en större mängd data. Ett analysprogram har räknat ut för dig att antalet klick per timme för kampanjen kan liknas med en normalfördelning med $\mu=6$ och $\sigma=3$.}
+    \begin{enumerate}
+      \item{Vad är sannolikheten att du får mindre än $4$ klick på en timme?}
+      \vspace{10cm}
+      \item{Vad är sannolikheten att du får mer än $7$ klick på en timme?}
+      \newpage
+      \item{Du har en tes om att klicken borde vara helt oberoende av varandra och vill undersöka saken med en binomialfördelning. Ditt analysprogram har beräknat att i snitt klickar $9\%$ av besökarna på kampanjen. Vad är sannolikheten att $2$ av $8$ besökare klickar?}
+    \end{enumerate}
+\newpage
+    \item{Du mäter antalet besökare och antalet klick under några timmar, resultatet kan ses ovan.
+    \begin{table}
+        \centering
+        \begin{tabular}[H]{c|c}
+        \textbf{Antal besökare $(x)$}  & \textbf{Antal klick $(y)$}\\ \hline
+                82                   & 8                           \\
+                41                   & 3                           \\
+                73                   & 7                           \\
+                104                  & 10
+        \end{tabular}
+    \end{table}
+  }
+    \begin{enumerate}
+        \item{Skissa upp datan i en "scatter-plot". Ser du någon korrelation?}
+        \newpage
+        \item{Bevisa att det finns en korrelation genom att beräkna korrelationskoefficienten $r$}
+        \newpage
+        \item{Beskriv korrelationen med en linjär regression ($\hat{y}=kx+m$). Skissa även upp linjen i din "scatter-plot".}
+        \newpage
+        \item{Använd din linjära regression för att uppskatta hur många klick som kampanjen fått om du haft $250$ besökare under en timme. Kan du lita på värdet?}
+    \end{enumerate}
+\end{enumerate}
+\end{document}

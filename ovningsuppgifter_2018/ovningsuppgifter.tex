@@ -1,0 +1,133 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+
+\title{Övningsuppgifter\\ {Statistik HT18 (DMS17H)}}
+\author{Victor Bäckman, victor.backman@advectas.se}
+
+\begin{document}
+\maketitle
+\vspace{2cm}
+Namn:
+{\rule{13cm}{0.4pt}}
+\vspace{5cm}
+\begin{center}
+  Svar fås under repetitionen. \\
+  \vspace{3cm}
+  {\huge Lycka till!}
+\end{center}
+
+\newpage
+\begin{enumerate}
+    \item{{\bf Deskriptiv statistik} \\ Du har en lista med längder i cm: $A=[165, 188, 159, 170, 198]$. Beräkna:}
+    \begin{enumerate}
+      \item{Medelvärdet $\bar{A}$}
+      \vspace{3cm}
+      \item{Medianen $m$}
+      \vspace{3cm}
+      \item{Standardavvikelsen $\sigma$}
+      \vspace{3cm}
+      \item{Variansen $var(x)$}
+    \end{enumerate}
+    \newpage
+    \item{{\bf Sannolikhetsfördelningar} \\ Du har en normalfördelning med $\mu = 8$ och $\sigma=3$.}
+    \begin{enumerate}
+      \item{Beräkna och tolka $P_r(x \leq 2)$}
+      \vspace{6cm}
+      \item{Beräkna och tolka $P_r(x \geq 6)$}
+      \vspace{6cm}
+      \item{Beräkna och tolka $P_r(4 \leq x \leq 5)$}
+      \newpage
+      \item{Beräkna $a$ för $P_r(x \leq a) = 35\%$ och tolka svaret}
+    \end{enumerate}
+    \newpage
+    \item{{\bf Sannolikhetsfördelningar}\\ Du gillar att käka ägg till kvällsmat och vet från historisk data att $20\%$ blir himmelskt perfekta. Antag att äggens tillagning inte påverkar varandra.}
+    \begin{enumerate}\label{egg}
+        \item{Vad är sannolikheten att $3$ ägg blir perfekta, om du steker $6$ stycken?}
+        \vspace{15cm}
+        \item{Vad är sannolikheten att $3$ ägg inte blir perfekta, om du steker $6$ stycken?}
+        \newpage
+        \item{Du tar ett extrajobb på restaurang, vad är sannolikheten att fler än $20$ ägg blir perfekta, om du steker $100$ stycken?}
+        \vspace{15cm}
+        \item{Vad är det väntade antalet perfekta ägg om du stekar $100$ stycken?}
+    \end{enumerate}
+    \newpage
+    \item{{\bf Konfidensintervall}\\Beräkna konfidensintervall för sannolikheten i uppgift \ref{egg}c om konfidensnivån är:}
+    \begin{enumerate}
+        \item{$90\%$}
+        \vspace{6cm}
+        \item{$50\%$}
+        \vspace{6cm}
+        \item{$10\%$}
+    \end{enumerate}
+    \newpage
+    \item{{\bf Kombinatorik} \\ Du har $7$ stycken olika bollar och tar ut $3$st. Beräkna antalet möjliga:}
+    \begin{enumerate}
+        \item{kombinationer om ordningen inte spelar roll}
+        \vspace{4cm}
+        \item{kombinationer om ordningen spelar roll}
+        \vspace{4cm}
+        \item{permutationer om ordningen inte spelar roll}
+        \vspace{4cm}
+        \item{permutationer om ordningen spelar roll}
+    \end{enumerate}
+    \newpage
+    \item{{\bf Korrelation} \\
+    \begin{table}
+        \centering
+        \begin{tabular}[H]{c|c}
+        \textbf{$(x)$}  & \textbf{$(y)$}\\ \hline
+        1                        & 9                           \\
+        3                        & 5                           \\
+        5                       & 0                           \\
+        8                       & -7
+        \end{tabular}
+    \end{table}
+  }
+    \begin{enumerate}
+        \item{Skissa upp datan i en "scatter-plot". Ser du någon korrelation?}
+        \newpage
+        \item{Beräkna korrelationskoefficienten $r$}
+        \newpage
+        \item{Beskriv korrelationen med en linjär regression ($\hat{y}=kx+m$).}
+    \end{enumerate}
+\newpage
+    \item{{\bf Sannolikhetslära} \\ $S=\{a, b, c, d, e, f\}$, $A=[a, b, c]$, $B=[c, d, e, f]$. Antag $A, B$ oberoende.}
+    \begin{enumerate}
+        \item{Skissa upp $A, B$ i ett Venndiagram, är de disjunkta?}
+        \vspace{6cm}
+        \item{Beräkna och tolka $A^c)$}
+        \vspace{3cm}
+        \item{Beräkna och tolka $P_r(A \cap B)$}
+        \vspace{3cm}
+        \item{Beräkna och tolka $P_r(A \cup B)$}
+        \vspace{3cm}
+        \item{Beräkna oddset för att dra $a$ eller $b$ ur $S$}
+    \end{enumerate}
+    \newpage
+    \item{{\bf Betingad sannolikhet}\\En femtedel av alla fästingar bär på borrelia. Risken att borrelia överförs till en människa vid ett bett är $60\%$ (påhittad data)}. \\
+    \begin{enumerate}
+        \item{Vad är sannolikheten att borrelia överförs till en människa vid bett?}
+        \vspace{6cm}
+        \item{Vad är sannolikheten att drabbas av borrelia, om man blir biten $3$ gånger?}
+    \end{enumerate}
+    \newpage
+    \item{{\bf Stickprov} \\ Diskutera:}
+    \begin{enumerate}
+        \item{Varför gör man stickprov?}
+        \vspace{5cm}
+        \item{Vad finns det för möjliga felkällor när man gör ett stickprov?}
+        \vspace{5cm}
+        \item{Vad kan man göra för att minimera felet när man använder stickprov?}
+        \vspace{5cm}
+        \item{Definiera den centrala gränsvärdessatsen.}
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
